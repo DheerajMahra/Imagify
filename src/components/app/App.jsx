@@ -15,7 +15,7 @@ function App() {
 
         setIsLoading(true)
 
-        const res = await axios(`https://pixabay.com/api/?key=${process.env.REACT_APP_API_KEY}&q=${encodeURIComponent(query)}&per_page=21`)
+        const res = await axios(`https://pixabay.com/api/?key=${process.env.REACT_APP_API_KEY}&q=${encodeURIComponent(query)}&per_page=21&timestamp=${new Date().getTime()}`)
 
         const imgs = res.data.hits
 
